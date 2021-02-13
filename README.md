@@ -1,4 +1,4 @@
-#公開サイトはこちら↓
+# 公開サイトはこちら↓
 https://portfolio-of-ay.herokuapp.com
 
 # Getting Started with Create React App

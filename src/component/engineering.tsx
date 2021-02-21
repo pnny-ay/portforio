@@ -48,8 +48,8 @@ function Engineering()  {
       <Blue>個人作品</Blue>
       </Box>
       <Box letterSpacing={1} fontWeight="fontWeightLight" fontSize="body2.fontSize">
-          2020/6 刺繍糸管理アプリケーション (Ruby on Rails / MySQL / heroku)<br />
-          2021/2 ポートフォリオサイト (React / Typescript / heroku)
+          2020/6 <Link href="https://young-coast-35285.herokuapp.com/home">刺繍糸管理アプリケーション</Link> (Ruby on Rails / MySQL / heroku)<br />
+          2021/2 <Link href="">ポートフォリオサイト</Link> (React / Typescript / heroku)
       </Box>
     </Typography>
                 </Paper>

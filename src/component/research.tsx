@@ -34,6 +34,7 @@ function Research() {
           autoPlay
           loop
           muted
+          playsInline
         />
     <CardContent>
     <Typography component="div" color="textSecondary">
@@ -57,6 +58,7 @@ function Research() {
           autoPlay
           loop
           muted
+          playsInline
         />
     <CardContent>
     <Typography component="div" color="textSecondary">

@@ -24,7 +24,7 @@ function Research() {
       </Name>
     </Typography>
     <Grid container spacing={3}>
-    <Grid item xs={6}>
+    <Grid item sm={6} xs={12}>
     <Card>
     <CardMedia
           src="fire.mp4"
@@ -47,7 +47,7 @@ function Research() {
     </CardContent>
     </Card>
     </Grid>
-    <Grid item xs={6}>
+    <Grid item sm={6} xs={12}>
     <Card>
     <CardMedia
           src="parachute.mp4"

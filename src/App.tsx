@@ -7,7 +7,7 @@ import Engineering from "component/engineering";
 import Handmade from "component/handmade";
 import Illustration from "component/illustration";
 import Box from '@material-ui/core/Box';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
+import Icon from '@material-ui/icons/Menu';
 import IconButton from '@material-ui/core/IconButton';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -21,10 +21,21 @@ const UseStyles = makeStyles((theme: Theme) =>
       },
     },
     pc: {
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('xs')]: {
         display: 'none',
       }
     },
+    item: {
+      letterSpacing: 2,
+      fontFamily: "Segoe UI",
+      fontSize: 14,
+    },
+    spitem: {
+      color: '#707070',
+      letterSpacing: 1,
+      fontFamily: "Segoe UI",
+      fontSize: 14,
+    }
   }),
 );
 
@@ -44,14 +55,13 @@ function App() {
 
   return (
     <Root>
-      {/* <SmartHeader className={classes.sp}>
+      <SmartHeader className={classes.sp}>
       <IconButton
-        aria-label="more"
-        aria-controls="long-menu"
+        aria-controls="simple-menu"
         aria-haspopup="true"
         onClick={handleClick}
       >
-        <MoreVertIcon />
+      <Icon fontSize="large"/>
       </IconButton>
       <Menu
         id="simple-menu"
@@ -60,13 +70,18 @@ function App() {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose}>Profile</MenuItem>
-        <MenuItem onClick={handleClose}>My account</MenuItem>
-        <MenuItem onClick={handleClose}>Logout</MenuItem>
+        <MenuItem className={classes.spitem} component="a" href="">top</MenuItem>
+        <MenuItem className={classes.spitem} component="a" href="#about">about</MenuItem>
+        <MenuItem className={classes.spitem} component="a" href="#research">research</MenuItem>
+        <MenuItem className={classes.spitem} component="a" href="#engineering">engineering</MenuItem>
+        <MenuItem className={classes.spitem} component="a" href="#handmade">handmade</MenuItem>
+        <MenuItem className={classes.spitem} component="a" href="#illustration">illustration</MenuItem>
       </Menu>
-      </SmartHeader> */}
+      </SmartHeader>
       <Header className={classes.pc}>
-        <Box letterSpacing={2} fontFamily="Segoe UI" fontSize="overline.fontSize">
+        {/* <Box letterSpacing={2} fontFamily="Segoe UI" fontSize="overline.fontSize"> */}
+        <Box className={classes.item}>
+
         <Item href="">top</Item>
         <Item href="#about">about</Item>
         <Item href="#research">research</Item>
@@ -90,7 +105,7 @@ const Root = styled('div')({
 })
 
 const Item = styled('a')({
-  padding: '20px',
+  padding: '10px',
   color: '#b3b3b3',
   textDecoration: 'none',
   '&:hover': {
@@ -99,6 +114,13 @@ const Item = styled('a')({
 })
 
 const Header = styled('div')({
+  float: 'right',
+  position: 'fixed',
+  top: '20px',
+  right: '20px',
+})
+
+const SmartHeader = styled('div')({
   float: 'right',
   position: 'fixed',
   top: '20px',

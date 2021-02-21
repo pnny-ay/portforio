@@ -27,13 +27,11 @@ const UseStyles = makeStyles((theme: Theme) =>
     },
     item: {
       letterSpacing: 2,
-      fontFamily: "Segoe UI",
       fontSize: 14,
     },
     spitem: {
       color: '#707070',
       letterSpacing: 1,
-      fontFamily: "Segoe UI",
       fontSize: 14,
     }
   }),
@@ -55,6 +53,7 @@ function App() {
 
   return (
     <Root>
+      <a href="https://github.com/pnny-ay" target="_blank" rel="noopener noreferrer"><GitIcon src="github.png"/></a>
       <SmartHeader className={classes.sp}>
       <IconButton
         aria-controls="simple-menu"
@@ -102,6 +101,10 @@ function App() {
 
 const Root = styled('div')({
   backgroundColor: "#F4F3F0",
+})
+
+const GitIcon = styled('img')({
+  padding: '20px',
 })
 
 const Item = styled('a')({
